@@ -8,6 +8,7 @@ RUN pip install Flask gunicorn
 
 RUN pip install numpy
 RUN pip install pandas
+RUN pip install requests
 
 # Copy local code to the container image.
 WORKDIR /app
@@ -15,7 +16,7 @@ COPY . .
 
 # Service must listen to $PORT environment variable.
 # This default value facilitates local development.
-ENV PORT 8080
+ENV PORT 3000
 
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
