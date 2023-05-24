@@ -1,0 +1,13 @@
+sqoop import-all-tables \
+--connect "jdbc:mysql://192.168.2.20:3310/retail_db" \
+--username root \
+--password root \
+--warehouse-dir /user/vagrant/datasets/
+
+sqoop import-all-tables \
+--connect "jdbc:mysql://192.168.2.20:3310/retail_db" \
+--username root \
+--password root \
+--as-avrodatafile \
+--warehouse-dir /user/vagrant/datasets/avro \
+--driver com.mysql.jdbc.Driver
