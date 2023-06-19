@@ -17,6 +17,7 @@ RUN pip install pandasql
 RUN pip install dask
 RUN pip install flask_cors
 RUN pip install flask_sqlalchemy
+RUN pip install graphviz
 
 
 WORKDIR /user/app

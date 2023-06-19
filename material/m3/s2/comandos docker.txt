@@ -1,0 +1,13 @@
+
+Ejecutar el bas de contenedor de forma interactiva
+
+>_ docker exec -it container bash
+
+Copiar archivos de host a container
+
+>_ docker cp file datanode:/file
+
+Copiar archivos de container a host
+>_ docker cp datanode:/file /home/user/file
+
+

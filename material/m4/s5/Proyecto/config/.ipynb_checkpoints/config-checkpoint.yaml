@@ -1,0 +1,14 @@
+azure_storage:
+  connection_string: "BlobEndpoint=https://adlsdatapath.blob.core.windows.net/;QueueEndpoint=https://adlsdatapath.queue.core.windows.net/;FileEndpoint=https://adlsdatapath.file.core.windows.net/;TableEndpoint=https://adlsdatapath.table.core.windows.net/;SharedAccessSignature=sv=2021-12-02&ss=bfqt&srt=co&sp=rwdlacupyx&se=2023-04-30T08:51:42Z&st=2023-04-26T00:51:42Z&spr=https&sig=M3XLz2H1ot52gIziMLvzl5kZLWr3srO29DV0hdLy5P8%3D"
+  
+mongo_db:
+  connection_string: "mongodb+srv://m001-student:mCxRoc3yh6nf2Xyv@sandbox.okkbl.mongodb.net/?retryWrites=true&w=majority"
+
+cloud_storage:
+  credentials: "/user/app/fresh-bloom-372404-c792e5b41e7f.json"
+  
+mysql:
+  host: ""
+  user: "root"
+  pass: "root"
+  port: "3310"
