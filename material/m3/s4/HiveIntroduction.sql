@@ -152,6 +152,8 @@ INSERT OVERWRITE TABLE persons2
 --
 -- Partition by
 --
+SET hive.exec.dynamic.partition = true;
+SET hive.exec.dynamic.partition.mode = nonstrict;
 
 DROP TABLE IF EXISTS persons3;
 
@@ -164,8 +166,12 @@ CREATE TABLE persons3 (
 )
 PARTITIONED BY (quantity INT);
 
+INSERT INTO persons3 PARTITION(quantity)
+SELECT * FROM persons;
+
 FROM persons
 INSERT OVERWRITE TABLE persons3
    SELECT * WHERE color='green';
 
 SELECT * FROM persons3;
+
